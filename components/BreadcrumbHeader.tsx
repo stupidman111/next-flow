@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { MobileSidebar } from "./Sidebar";
 
 /**
  * 使用链接层次结构显示当前资源的路径。
@@ -17,6 +18,7 @@ function BreadcrumbHeader() {
   const paths = pathName === "/" ? [""] : pathName?.split("/");
   return (
     <div className="flex items-center justify-start">
+      <MobileSidebar />
       <Breadcrumb>
         <BreadcrumbList>
           {paths.map((path, index) => (
