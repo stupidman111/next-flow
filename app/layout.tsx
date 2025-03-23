@@ -26,11 +26,11 @@ export default function RootLayout({
         },
       }}
     >
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
           <AppProviders>{children}</AppProviders>
+          <Toaster richColors />
         </body>
-        <Toaster richColors />
       </html>
     </ClerkProvider>
   );
